@@ -72,7 +72,7 @@ document.getElementById('loadLocalStorage').addEventListener('click', () => {
 })
 
 document.getElementById('clearLocalStorage').addEventListener('click', () => {
-   if(JSON.parse(localStorage.getItem('store')).length === 0) {
+   if(!localStorage.getItem('store')) {
       alert('There is no data saved in the local machine')
    } else {
       lStorage.innerHTML = ''
@@ -80,7 +80,7 @@ document.getElementById('clearLocalStorage').addEventListener('click', () => {
 })
 
 document.getElementById('clearLocalStoragepermanently').addEventListener('click', () => {
-   if(JSON.parse(localStorage.getItem('store')).length === 0) {
+   if(!localStorage.getItem('store')) {
       alert('There is no data saved in the local machine')
    } else {
       const userFeedback = confirm('Are you sure to clear previous data permanently?')
